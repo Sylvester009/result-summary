@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /*Primary*/
+  --Lightred: hsl(0, 100%, 67%);
+  --Orangeyyellow: hsl(39, 100%, 56%);
+  --Greenteal: hsl(166, 100%, 37%);
+  --Cobaltblue: hsl(234, 85%, 45%);
+
+  /*gradients*/
+  --Lightslatebluebg: hsl(252, 100%, 67%);
+  --Lightroyalbluebg: hsl(241, 81%, 54%);
+  --Violetbluecircle: hsla(256, 72%, 46%, 1);
+  --Persianbluecircle: hsla(241, 72%, 46%, 0);
+
+  /*Neutral*/
+  --White: hsl(0, 0%, 100%);
+  --Paleblue: hsl(221, 100%, 96%);
+  --Lightlavender: hsl(241, 100%, 89%);
+  --Darkgrayblue: hsl(224, 30%, 27%);
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  border: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-section {
+  background: linear-gradient(
+    to bottom,
+    var(--Lightslatebluebg),
+    var(--Lightroyalbluebg)
+  );
+  color: var(--White);
+  padding: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: inline-block;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--Lightlavender);
+}
+
+.total-result-div {
+  background: linear-gradient(
+    to bottom,
+    var(--Violetbluecircle),
+    var(--Lightroyalbluebg),
+    var(--Persianbluecircle)
+  );
+  border-radius: 50%;
+  padding: 30px 0px;
+  margin: 0 auto 10px;
+  width: 10rem;
+}
+
+.total-score {
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.overall {
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: var(--Lightlavender);
+}
+
+.result-comment {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+}
+
+.text {
+  color: var(--Lightlavender);
+  padding: 0px 25px;
+  font-size: 16px;
+}
+
+/**Summary section*/
+
+.summary-section {
+  text-align: left;
+  margin: 2rem 0;
+  padding: 0 1.5rem;
+  display: inline-block;
+}
+
+.summary-section h3 {
+  color: var(--Darkgrayblue);
+  font-size: 20px;
+}
+
+.summary-division {
+  display: flex;
+  margin: 1rem 0;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: auto;
+}
+
+.sum-text {
+  text-align: right;
+  color: hsla(224, 30%, 27%, 0.6);
+  font-weight: 700;
+}
+
+.score {
+  color: var(--Darkgrayblue);
+}
+
+.reaction-div {
+  background-color: hsl(0, 100%, 67%, 0.08);
+}
+
+.memory-div {
+  background-color: hsl(39, 100%, 56%, 0.08);
+}
+
+.verbal-div {
+  background-color: hsl(166, 100%, 37%, 0.08);
+}
+
+.visual-div {
+  background-color: hsla(234, 85%, 45%, 0.08);
+}
+
+.r-text {
+  color: var(--Lightred);
+}
+
+.m-text {
+  color: var(--Orangeyyellow);
+}
+
+.ve-text {
+  color: var(--Greenteal);
+}
+
+.vi-text {
+  color: var(--Cobaltblue);
+}
+
+button {
+  text-align: center;
+  color: var(--White);
+  background-color: var(--Darkgrayblue);
+  padding: 15px;
+  border-radius: 40px;
+  margin: 15px auto;
+  font-weight: 700;
+  transition: all ease-in-out 0.5s;
+}
+
+button:hover {
+  background-color: var(--Lightroyalbluebg);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    height: 100vh;
+  }
+
+  .main {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 5px 10px 18px var(--Lightlavender);
+    max-width: 700px;
+    height: auto;
+  }
+
+  .result-section {
+    border-radius: 30px;
+  }
+
+  .result-comment {
+    padding-top: 20px;
+  }
+
+  .result-section .text,
+  .title {
+    padding: 20px 0px;
+  }
+
+  .result-section .text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  button {
+    margin-bottom: 5px;
+  }
+}
+
+/*Weights: 500, 700, 800*/
